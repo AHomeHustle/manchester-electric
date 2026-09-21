@@ -1,6 +1,7 @@
 /* =========================================================
    MANCHESTER ELECTRIC
    Modern responsive stylesheet
+   RED BRAND THEME
 ========================================================= */
 
 
@@ -10,40 +11,51 @@
 
 :root {
 
-    --blue: #075da8;
-    --blue-dark: #06447c;
-    --blue-deep: #032b4c;
-    --blue-light: #eaf4fc;
-    --blue-pale: #f4f9fd;
+    /* Primary brand colours */
+    --red: #c62828;
+    --red-dark: #a91f1f;
+    --red-deep: #5c1010;
 
+    /* Light brand colours */
+    --red-light: #fdecec;
+    --red-pale: #fff6f6;
+
+    /* Accent */
     --accent: #ffb900;
     --accent-dark: #e5a500;
 
+    /* Base */
     --white: #ffffff;
-    --black: #101820;
+    --black: #181010;
 
-    --text: #263746;
-    --text-light: #667887;
+    /* Typography */
+    --text: #3d2a2a;
+    --text-light: #756464;
 
-    --border: #dce5eb;
+    /* UI */
+    --border: #eadada;
     --background: #ffffff;
-    --background-light: #f5f8fa;
+    --background-light: #faf5f5;
 
+    /* Shadows */
     --shadow-sm:
-        0 5px 20px rgba(11, 43, 70, 0.07);
+        0 5px 20px rgba(92, 16, 16, 0.07);
 
     --shadow:
-        0 15px 45px rgba(11, 43, 70, 0.10);
+        0 15px 45px rgba(92, 16, 16, 0.10);
 
     --shadow-lg:
-        0 25px 70px rgba(11, 43, 70, 0.16);
+        0 25px 70px rgba(92, 16, 16, 0.16);
 
+    /* Radius */
     --radius-sm: 8px;
     --radius: 14px;
     --radius-lg: 22px;
 
+    /* Layout */
     --container: 1180px;
 
+    /* Animation */
     --transition:
         180ms ease;
 
@@ -128,7 +140,7 @@ p {
 h1,
 h2,
 h3 {
-    color: var(--blue-deep);
+    color: var(--red-deep);
     line-height: 1.15;
 }
 
@@ -163,7 +175,7 @@ address {
 
 
 .top-bar {
-    background: var(--blue-deep);
+    background: var(--red-deep);
     color: rgba(255, 255, 255, 0.78);
 
     font-size: 13px;
@@ -231,7 +243,7 @@ address {
     display: grid;
     place-items: center;
 
-    background: var(--blue);
+    background: var(--red);
     color: var(--white);
 
     border-radius: 9px;
@@ -242,7 +254,7 @@ address {
     letter-spacing: -0.05em;
 
     box-shadow:
-        0 7px 20px rgba(7, 93, 168, 0.2);
+        0 7px 20px rgba(198, 40, 40, 0.2);
 }
 
 
@@ -255,7 +267,7 @@ address {
 
 
 .logo-text strong {
-    color: var(--blue-deep);
+    color: var(--red-deep);
 
     font-size: 18px;
     font-weight: 800;
@@ -267,7 +279,7 @@ address {
 .logo-text small {
     margin-top: 4px;
 
-    color: var(--blue);
+    color: var(--red);
 
     font-size: 12px;
     font-weight: 700;
@@ -286,7 +298,7 @@ address {
 
 
 .nav-links > a:not(.nav-cta) {
-    color: #435361;
+    color: #574343;
 
     font-size: 14px;
     font-weight: 650;
@@ -297,14 +309,14 @@ address {
 
 
 .nav-links > a:not(.nav-cta):hover {
-    color: var(--blue);
+    color: var(--red);
 }
 
 
 .nav-cta {
     padding: 11px 18px;
 
-    background: var(--blue);
+    background: var(--red);
     color: var(--white);
 
     border-radius: 7px;
@@ -319,7 +331,7 @@ address {
 
 
 .nav-cta:hover {
-    background: var(--blue-dark);
+    background: var(--red-dark);
     transform: translateY(-1px);
 }
 
@@ -347,7 +359,7 @@ address {
 
     margin: 5px 0;
 
-    background: var(--blue-deep);
+    background: var(--red-deep);
 }
 
 
@@ -367,9 +379,9 @@ address {
     background:
         linear-gradient(
             120deg,
-            #f5faff 0%,
-            #eaf4fc 52%,
-            #dceefa 100%
+            #fff8f8 0%,
+            #fdecec 52%,
+            #f9dddd 100%
         );
 }
 
@@ -386,11 +398,11 @@ address {
     border-radius: 50%;
 
     border:
-        80px solid rgba(7, 93, 168, 0.055);
+        80px solid rgba(198, 40, 40, 0.055);
 
     box-shadow:
-        0 0 0 70px rgba(7, 93, 168, 0.025),
-        0 0 0 150px rgba(7, 93, 168, 0.018);
+        0 0 0 70px rgba(198, 40, 40, 0.025),
+        0 0 0 150px rgba(198, 40, 40, 0.018);
 
     pointer-events: none;
 }
@@ -422,7 +434,7 @@ address {
 
     margin-bottom: 18px;
 
-    color: var(--blue);
+    color: var(--red);
 
     font-size: 12px;
     font-weight: 800;
@@ -454,7 +466,7 @@ address {
 
 .hero h1 span {
     display: block;
-    color: var(--blue);
+    color: var(--red);
 }
 
 
@@ -463,7 +475,7 @@ address {
 
     margin-bottom: 34px;
 
-    color: #536777;
+    color: #674d4d;
 
     font-size: 19px;
     line-height: 1.65;
@@ -511,44 +523,44 @@ address {
 
 
 .button-primary {
-    background: var(--blue);
+    background: var(--red);
     color: var(--white);
 
     box-shadow:
-        0 8px 25px rgba(7, 93, 168, 0.2);
+        0 8px 25px rgba(198, 40, 40, 0.2);
 }
 
 
 .button-primary:hover {
-    background: var(--blue-dark);
+    background: var(--red-dark);
 }
 
 
 .button-outline {
     background: transparent;
 
-    color: var(--blue);
+    color: var(--red);
 
-    border: 1px solid rgba(7, 93, 168, 0.3);
+    border: 1px solid rgba(198, 40, 40, 0.3);
 }
 
 
 .button-outline:hover {
     background: var(--white);
 
-    border-color: var(--blue);
+    border-color: var(--red);
 }
 
 
 .button-light {
     background: var(--white);
-    color: var(--blue);
+    color: var(--red);
 }
 
 
 .button-light:hover {
     background: var(--accent);
-    color: var(--blue-deep);
+    color: var(--red-deep);
 }
 
 
@@ -584,7 +596,7 @@ address {
 
     gap: 8px;
 
-    color: #516572;
+    color: #654d4d;
 
     font-size: 13px;
     font-weight: 650;
@@ -598,8 +610,8 @@ address {
     display: grid;
     place-items: center;
 
-    background: rgba(7, 93, 168, 0.1);
-    color: var(--blue);
+    background: rgba(198, 40, 40, 0.1);
+    color: var(--red);
 
     border-radius: 50%;
 
@@ -617,7 +629,7 @@ address {
 
     padding: 42px;
 
-    background: var(--blue);
+    background: var(--red);
 
     color: var(--white);
 
@@ -710,7 +722,7 @@ address {
 .text-link {
     display: inline-block;
 
-    color: var(--blue);
+    color: var(--red);
 
     font-weight: 750;
     font-size: 14px;
@@ -718,7 +730,7 @@ address {
 
 
 .text-link:hover {
-    color: var(--blue-dark);
+    color: var(--red-dark);
 }
 
 
@@ -882,15 +894,15 @@ address {
 .service-card:hover {
     transform: translateY(-5px);
 
-    border-color: rgba(7, 93, 168, 0.2);
+    border-color: rgba(198, 40, 40, 0.2);
 
     box-shadow: var(--shadow);
 }
 
 
 .service-card.featured {
-    background: var(--blue);
-    border-color: var(--blue);
+    background: var(--red);
+    border-color: var(--red);
 }
 
 
@@ -900,7 +912,7 @@ address {
     top: 22px;
     right: 26px;
 
-    color: #d9e5ec;
+    color: #eadada;
 
     font-size: 12px;
     font-weight: 800;
@@ -921,7 +933,7 @@ address {
 
     margin-bottom: 25px;
 
-    background: var(--blue-light);
+    background: var(--red-light);
 
     border-radius: 11px;
 
@@ -961,7 +973,7 @@ address {
 
 
 .card-link {
-    color: var(--blue);
+    color: var(--red);
 
     font-size: 13px;
     font-weight: 750;
@@ -969,7 +981,7 @@ address {
 
 
 .card-link:hover {
-    color: var(--blue-dark);
+    color: var(--red-dark);
 }
 
 
@@ -1034,7 +1046,7 @@ address {
 .emergency-content h2 {
     margin: 0;
 
-    color: var(--blue-deep);
+    color: var(--red-deep);
 
     font-size: 28px;
     letter-spacing: -0.03em;
@@ -1069,8 +1081,8 @@ address {
     background:
         linear-gradient(
             145deg,
-            var(--blue-deep),
-            var(--blue)
+            var(--red-deep),
+            var(--red)
         );
 
     border-radius: var(--radius-lg);
@@ -1183,7 +1195,7 @@ address {
 
     border-radius: 50%;
 
-    color: var(--blue-deep);
+    color: var(--red-deep);
 
     box-shadow: var(--shadow);
 }
@@ -1225,7 +1237,7 @@ address {
 
     gap: 9px;
 
-    color: var(--blue-deep);
+    color: var(--red-deep);
 
     font-size: 13px;
 }
@@ -1238,11 +1250,11 @@ address {
     display: grid;
     place-items: center;
 
-    background: var(--blue-light);
+    background: var(--red-light);
 
     border-radius: 50%;
 
-    color: var(--blue);
+    color: var(--red);
 
     font-size: 11px;
 }
@@ -1253,7 +1265,7 @@ address {
 ========================================================= */
 
 .section-dark {
-    background: var(--blue-deep);
+    background: var(--red-deep);
 }
 
 
@@ -1269,7 +1281,7 @@ address {
 
 
 .section-heading-light .section-label {
-    color: #78bff2;
+    color: #f08080;
 }
 
 
@@ -1379,11 +1391,11 @@ address {
     display: grid;
     place-items: center;
 
-    background: var(--blue-light);
+    background: var(--red-light);
 
     border-radius: 10px;
 
-    color: var(--blue);
+    color: var(--red);
 
     font-size: 12px;
     font-weight: 900;
@@ -1459,7 +1471,7 @@ address {
 .review-card blockquote {
     margin: 0 0 25px;
 
-    color: var(--blue-deep);
+    color: var(--red-deep);
 
     font-size: 16px;
     font-weight: 600;
@@ -1484,8 +1496,8 @@ address {
     background:
         linear-gradient(
             120deg,
-            var(--blue),
-            #0872ca
+            var(--red),
+            #d83a3a
         );
 
     color: var(--white);
@@ -1524,7 +1536,7 @@ address {
 
 
 .section-label-light {
-    color: #8ecaf7;
+    color: #ff9a9a;
 }
 
 
@@ -1582,11 +1594,11 @@ address {
     display: grid;
     place-items: center;
 
-    background: var(--blue-light);
+    background: var(--red-light);
 
     border-radius: 10px;
 
-    color: var(--blue);
+    color: var(--red);
 
     font-size: 18px;
 }
@@ -1610,7 +1622,7 @@ address {
 .contact-method a {
     display: inline-block;
 
-    color: var(--blue-deep);
+    color: var(--red-deep);
 
     font-size: 15px;
     font-weight: 750;
@@ -1653,7 +1665,7 @@ address {
 
     margin-bottom: 5px;
 
-    color: var(--blue);
+    color: var(--red);
 
     font-size: 11px;
     font-weight: 800;
@@ -1689,7 +1701,7 @@ address {
 
     margin-bottom: 6px;
 
-    color: var(--blue-deep);
+    color: var(--red-deep);
 
     font-size: 12px;
     font-weight: 750;
@@ -1703,7 +1715,7 @@ address {
 
     padding: 13px 14px;
 
-    background: #f8fafb;
+    background: #fcf8f8;
 
     border:
         1px solid var(--border);
@@ -1735,23 +1747,23 @@ address {
 .form-group textarea:focus {
     background: var(--white);
 
-    border-color: var(--blue);
+    border-color: var(--red);
 
     box-shadow:
-        0 0 0 3px rgba(7, 93, 168, 0.08);
+        0 0 0 3px rgba(198, 40, 40, 0.08);
 }
 
 
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-    color: #9aa9b4;
+    color: #a99393;
 }
 
 
 .form-note {
     margin: 14px 0 0;
 
-    color: #8796a0;
+    color: #978383;
 
     font-size: 11px;
 
@@ -1764,7 +1776,7 @@ address {
 ========================================================= */
 
 .site-footer {
-    background: #021f37;
+    background: #3d0808;
 
     color: rgba(255, 255, 255, 0.65);
 }
@@ -1787,7 +1799,7 @@ address {
 
 .logo-footer .logo-mark {
     background: var(--white);
-    color: var(--blue);
+    color: var(--red);
 }
 
 
@@ -1797,7 +1809,7 @@ address {
 
 
 .logo-footer .logo-text small {
-    color: #7dc4f7;
+    color: #ff9a9a;
 }
 
 
@@ -2008,7 +2020,7 @@ address {
 
 
     .nav-links > a:not(.nav-cta):hover {
-        background: var(--blue-pale);
+        background: var(--red-pale);
     }
 
 
@@ -2197,4 +2209,69 @@ address {
         height: 105px;
 
         right: 15px;
-        bottom
+        bottom: 15px;
+    }
+
+
+    .visual-badge strong {
+        font-size: 30px;
+    }
+
+
+    .about-points {
+        grid-template-columns: 1fr;
+    }
+
+
+    .benefit-list {
+        grid-template-columns: 1fr;
+    }
+
+
+    .contact-form-wrapper {
+        padding: 28px;
+    }
+
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+
+    .cta-actions {
+        width: 100%;
+
+        flex-direction: column;
+    }
+
+
+    .cta-actions .button {
+        width: 100%;
+    }
+
+
+    .footer-main {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-block: 55px;
+    }
+
+
+    .footer-column:last-child {
+        grid-column: auto;
+    }
+
+
+    .footer-bottom {
+        min-height: auto;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        padding-block: 25px;
+    }
+
+}
