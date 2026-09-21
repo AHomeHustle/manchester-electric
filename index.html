@@ -3,2067 +3,188 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Manchester Electric | Domestic, Commercial & Industrial Electricians</title>
-
-    <meta name="description"
-          content="Manchester Electric provides domestic, commercial and industrial electrical services throughout Manchester and Greater Manchester. Free quotations and emergency electrical services available.">
-
-    <meta name="theme-color" content="#071b33">
-
-    <style>
-        /* =========================================================
-           MANCHESTER ELECTRIC
-           Modern responsive website
-           ========================================================= */
-
-        :root {
-            --navy: #071b33;
-            --navy-light: #0d2949;
-            --blue: #0878d1;
-            --blue-bright: #1498ff;
-            --blue-dark: #0562aa;
-
-            --yellow: #f5c542;
-            --white: #ffffff;
-            --off-white: #f5f8fb;
-            --light: #edf2f7;
-
-            --text: #243447;
-            --text-light: #65758b;
-            --border: #dce5ee;
-
-            --success: #159957;
-
-            --container: 1180px;
-
-            --radius: 14px;
-            --radius-small: 9px;
-
-            --shadow: 0 18px 50px rgba(7, 27, 51, 0.09);
-            --shadow-small: 0 8px 25px rgba(7, 27, 51, 0.08);
-
-            --transition: 0.25s ease;
-        }
-
-
-        /* =========================================================
-           RESET
-           ========================================================= */
-
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            margin: 0;
-            font-family:
-                Inter,
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Roboto,
-                Helvetica,
-                Arial,
-                sans-serif;
-
-            color: var(--text);
-            background: var(--white);
-
-            line-height: 1.6;
-
-            -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;
-        }
-
-        img {
-            max-width: 100%;
-            display: block;
-        }
-
-        a {
-            color: inherit;
-            text-decoration: none;
-        }
-
-        button,
-        input,
-        textarea,
-        select {
-            font: inherit;
-        }
-
-        button {
-            cursor: pointer;
-        }
-
-
-        /* =========================================================
-           GLOBAL
-           ========================================================= */
-
-        .container {
-            width: min(
-                calc(100% - 40px),
-                var(--container)
-            );
-
-            margin-inline: auto;
-        }
-
-        .section {
-            padding: 100px 0;
-        }
-
-        .section-light {
-            background: var(--off-white);
-        }
-
-        .section-dark {
-            background: var(--navy);
-            color: var(--white);
-        }
-
-        .eyebrow {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-
-            margin-bottom: 14px;
-
-            color: var(--blue);
-            font-size: 0.82rem;
-            font-weight: 800;
-            letter-spacing: 0.12em;
-            text-transform: uppercase;
-        }
-
-        .eyebrow::before {
-            content: "";
-            width: 28px;
-            height: 3px;
-
-            background: var(--blue);
-            border-radius: 10px;
-        }
-
-        .section-heading {
-            max-width: 720px;
-            margin-bottom: 55px;
-        }
-
-        .section-heading h2 {
-            margin: 0 0 16px;
-
-            color: var(--navy);
-
-            font-size: clamp(
-                2rem,
-                4vw,
-                3.15rem
-            );
-
-            line-height: 1.08;
-            letter-spacing: -0.035em;
-        }
-
-        .section-heading p {
-            margin: 0;
-
-            color: var(--text-light);
-
-            font-size: 1.08rem;
-        }
-
-        .section-dark .section-heading h2 {
-            color: var(--white);
-        }
-
-        .section-dark .section-heading p {
-            color: #b8c8d9;
-        }
-
-
-        /* =========================================================
-           BUTTONS
-           ========================================================= */
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-
-            min-height: 52px;
-            padding: 0 23px;
-
-            border: 2px solid transparent;
-            border-radius: 8px;
-
-            font-weight: 750;
-            font-size: 0.96rem;
-
-            transition:
-                transform var(--transition),
-                background var(--transition),
-                border-color var(--transition),
-                color var(--transition),
-                box-shadow var(--transition);
-        }
-
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-
-        .btn-primary {
-            color: var(--white);
-            background: var(--blue);
-
-            box-shadow:
-                0 10px 25px rgba(8, 120, 209, 0.25);
-        }
-
-        .btn-primary:hover {
-            background: var(--blue-dark);
-        }
-
-        .btn-light {
-            color: var(--navy);
-            background: var(--white);
-        }
-
-        .btn-light:hover {
-            background: #edf5fc;
-        }
-
-        .btn-outline {
-            color: var(--white);
-            border-color: rgba(255,255,255,0.35);
-            background: transparent;
-        }
-
-        .btn-outline:hover {
-            background: var(--white);
-            color: var(--navy);
-        }
-
-        .btn-dark {
-            color: var(--white);
-            background: var(--navy);
-        }
-
-        .btn-dark:hover {
-            background: var(--navy-light);
-        }
-
-
-        /* =========================================================
-           TOP BAR
-           ========================================================= */
-
-        .topbar {
-            background: #041426;
-            color: #d9e5f0;
-
-            font-size: 0.83rem;
-        }
-
-        .topbar-inner {
-            min-height: 40px;
-
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            gap: 20px;
-        }
-
-        .topbar-left,
-        .topbar-right {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-        }
-
-        .topbar a {
-            transition: color var(--transition);
-        }
-
-        .topbar a:hover {
-            color: var(--white);
-        }
-
-        .topbar strong {
-            color: var(--white);
-        }
-
-
-        /* =========================================================
-           NAVIGATION
-           ========================================================= */
-
-        .header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-
-            background: rgba(255,255,255,0.96);
-
-            border-bottom: 1px solid var(--border);
-
-            backdrop-filter: blur(15px);
-        }
-
-        .nav {
-            min-height: 78px;
-
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 30px;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-
-            color: var(--navy);
-
-            font-size: 1.35rem;
-            font-weight: 900;
-            letter-spacing: -0.03em;
-        }
-
-        .logo-mark {
-            width: 42px;
-            height: 42px;
-
-            display: grid;
-            place-items: center;
-
-            color: var(--white);
-            background: var(--blue);
-
-            border-radius: 9px;
-
-            font-size: 1.25rem;
-
-            box-shadow:
-                0 7px 18px rgba(8, 120, 209, 0.25);
-        }
-
-        .logo small {
-            display: block;
-
-            color: var(--text-light);
-
-            font-size: 0.58rem;
-            font-weight: 700;
-            letter-spacing: 0.08em;
-            text-transform: uppercase;
-        }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .nav-links a {
-            display: block;
-
-            padding: 11px 14px;
-
-            color: #33465a;
-
-            border-radius: 7px;
-
-            font-size: 0.92rem;
-            font-weight: 700;
-
-            transition:
-                background var(--transition),
-                color var(--transition);
-        }
-
-        .nav-links a:hover {
-            color: var(--blue);
-            background: #edf6fd;
-        }
-
-        .nav-cta {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .nav-phone {
-            color: var(--navy);
-            font-weight: 800;
-        }
-
-        .mobile-menu {
-            display: none;
-
-            width: 44px;
-            height: 44px;
-
-            border: 1px solid var(--border);
-            border-radius: 8px;
-
-            background: var(--white);
-            color: var(--navy);
-
-            font-size: 1.4rem;
-        }
-
-
-        /* =========================================================
-           HERO
-           ========================================================= */
-
-        .hero {
-            position: relative;
-            overflow: hidden;
-
-            color: var(--white);
-
-            background:
-                radial-gradient(
-                    circle at 85% 15%,
-                    rgba(20,152,255,0.25),
-                    transparent 32%
-                ),
-                linear-gradient(
-                    115deg,
-                    #06182e 0%,
-                    #092747 55%,
-                    #073b68 100%
-                );
-        }
-
-        .hero::after {
-            content: "";
-
-            position: absolute;
-            width: 600px;
-            height: 600px;
-
-            right: -300px;
-            bottom: -350px;
-
-            border: 1px solid rgba(255,255,255,0.07);
-            border-radius: 50%;
-
-            box-shadow:
-                0 0 0 80px rgba(255,255,255,0.025),
-                0 0 0 160px rgba(255,255,255,0.02);
-        }
-
-        .hero-inner {
-            position: relative;
-            z-index: 1;
-
-            min-height: 650px;
-
-            display: grid;
-            grid-template-columns: 1.15fr 0.85fr;
-
-            align-items: center;
-
-            gap: 70px;
-
-            padding: 80px 0;
-        }
-
-        .hero-content {
-            max-width: 700px;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 9px;
-
-            margin-bottom: 25px;
-            padding: 8px 13px;
-
-            border: 1px solid rgba(255,255,255,0.15);
-            border-radius: 100px;
-
-            background: rgba(255,255,255,0.07);
-
-            color: #d9edff;
-
-            font-size: 0.82rem;
-            font-weight: 700;
-        }
-
-        .hero-badge span {
-            width: 8px;
-            height: 8px;
-
-            background: #45dc91;
-
-            border-radius: 50%;
-        }
-
-        .hero h1 {
-            margin: 0 0 23px;
-
-            font-size: clamp(
-                2.8rem,
-                6vw,
-                5rem
-            );
-
-            line-height: 0.98;
-            letter-spacing: -0.055em;
-        }
-
-        .hero h1 span {
-            color: #55b8ff;
-        }
-
-        .hero p {
-            max-width: 610px;
-
-            margin: 0 0 32px;
-
-            color: #c7d7e8;
-
-            font-size: clamp(
-                1.05rem,
-                2vw,
-                1.22rem
-            );
-        }
-
-        .hero-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-
-        .hero-trust {
-            display: flex;
-            flex-wrap: wrap;
-
-            gap: 25px;
-
-            margin-top: 42px;
-        }
-
-        .hero-trust-item {
-            display: flex;
-            align-items: center;
-            gap: 9px;
-
-            color: #d5e3ef;
-
-            font-size: 0.87rem;
-            font-weight: 650;
-        }
-
-        .check {
-            width: 22px;
-            height: 22px;
-
-            display: grid;
-            place-items: center;
-
-            flex-shrink: 0;
-
-            background: rgba(20,152,255,0.18);
-            color: #59bbff;
-
-            border-radius: 50%;
-
-            font-size: 0.72rem;
-        }
-
-
-        /* =========================================================
-           HERO VISUAL
-           ========================================================= */
-
-        .hero-visual {
-            position: relative;
-
-            min-height: 420px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .electric-card {
-            position: relative;
-
-            width: min(100%, 420px);
-            aspect-ratio: 0.85;
-
-            overflow: hidden;
-
-            border:
-                1px solid rgba(255,255,255,0.15);
-
-            border-radius: 24px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    rgba(255,255,255,0.13),
-                    rgba(255,255,255,0.035)
-                );
-
-            box-shadow:
-                0 35px 80px rgba(0,0,0,0.25);
-
-            transform: rotate(2deg);
-        }
-
-        .electric-card::before {
-            content: "";
-
-            position: absolute;
-            inset: 20px;
-
-            border:
-                1px solid rgba(255,255,255,0.08);
-
-            border-radius: 17px;
-        }
-
-        .bolt {
-            position: absolute;
-
-            left: 50%;
-            top: 50%;
-
-            transform:
-                translate(-50%, -50%)
-                rotate(-2deg);
-
-            color: #6ac5ff;
-
-            font-size: 12rem;
-            line-height: 1;
-
-            filter:
-                drop-shadow(
-                    0 0 30px
-                    rgba(20,152,255,0.5)
-                );
-        }
-
-        .card-label {
-            position: absolute;
-
-            left: 30px;
-            bottom: 30px;
-
-            color: white;
-        }
-
-        .card-label strong {
-            display: block;
-
-            font-size: 1.2rem;
-        }
-
-        .card-label span {
-            color: #a9c1d6;
-
-            font-size: 0.82rem;
-        }
-
-
-        /* =========================================================
-           TRUST BAR
-           ========================================================= */
-
-        .trust-bar {
-            position: relative;
-            z-index: 5;
-
-            margin-top: -1px;
-
-            background: var(--white);
-
-            border-bottom: 1px solid var(--border);
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns:
-                repeat(4, 1fr);
-
-            border-left: 1px solid var(--border);
-        }
-
-        .trust-item {
-            min-height: 105px;
-
-            display: flex;
-            align-items: center;
-            gap: 15px;
-
-            padding: 20px 25px;
-
-            border-right: 1px solid var(--border);
-        }
-
-        .trust-icon {
-            width: 45px;
-            height: 45px;
-
-            display: grid;
-            place-items: center;
-
-            flex-shrink: 0;
-
-            color: var(--blue);
-            background: #eaf5fd;
-
-            border-radius: 10px;
-
-            font-size: 1.25rem;
-        }
-
-        .trust-item strong {
-            display: block;
-
-            color: var(--navy);
-
-            font-size: 0.93rem;
-        }
-
-        .trust-item span {
-            display: block;
-
-            color: var(--text-light);
-
-            font-size: 0.78rem;
-        }
-
-
-        /* =========================================================
-           SERVICES
-           ========================================================= */
-
-        .services-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 22px;
-        }
-
-        .service-card {
-            position: relative;
-
-            overflow: hidden;
-
-            padding: 32px;
-
-            background: var(--white);
-
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-
-            box-shadow: var(--shadow-small);
-
-            transition:
-                transform var(--transition),
-                box-shadow var(--transition),
-                border-color var(--transition);
-        }
-
-        .service-card:hover {
-            transform: translateY(-6px);
-
-            border-color: #bcdcf2;
-
-            box-shadow: var(--shadow);
-        }
-
-        .service-icon {
-            width: 55px;
-            height: 55px;
-
-            display: grid;
-            place-items: center;
-
-            margin-bottom: 25px;
-
-            color: var(--blue);
-
-            background:
-                linear-gradient(
-                    135deg,
-                    #eaf6ff,
-                    #dcefff
-                );
-
-            border-radius: 12px;
-
-            font-size: 1.5rem;
-        }
-
-        .service-card h3 {
-            margin: 0 0 10px;
-
-            color: var(--navy);
-
-            font-size: 1.22rem;
-            letter-spacing: -0.02em;
-        }
-
-        .service-card p {
-            margin: 0 0 20px;
-
-            color: var(--text-light);
-
-            font-size: 0.92rem;
-        }
-
-        .service-card ul {
-            list-style: none;
-
-            padding: 0;
-            margin: 0;
-        }
-
-        .service-card li {
-            position: relative;
-
-            padding: 6px 0 6px 23px;
-
-            color: #3c5063;
-
-            font-size: 0.88rem;
-        }
-
-        .service-card li::before {
-            content: "✓";
-
-            position: absolute;
-            left: 0;
-
-            color: var(--blue);
-
-            font-weight: 900;
-        }
-
-
-        /* =========================================================
-           ABOUT
-           ========================================================= */
-
-        .about-grid {
-            display: grid;
-
-            grid-template-columns:
-                0.9fr 1.1fr;
-
-            gap: 80px;
-
-            align-items: center;
-        }
-
-        .about-visual {
-            position: relative;
-
-            min-height: 520px;
-
-            overflow: hidden;
-
-            border-radius: 22px;
-
-            background:
-                linear-gradient(
-                    145deg,
-                    #0b3154,
-                    #0878d1
-                );
-
-            box-shadow: var(--shadow);
-        }
-
-        .about-visual::before {
-            content: "";
-
-            position: absolute;
-
-            width: 350px;
-            height: 350px;
-
-            top: -100px;
-            right: -100px;
-
-            border:
-                1px solid rgba(255,255,255,0.15);
-
-            border-radius: 50%;
-
-            box-shadow:
-                0 0 0 60px rgba(255,255,255,0.035),
-                0 0 0 120px rgba(255,255,255,0.025);
-        }
-
-        .about-symbol {
-            position: absolute;
-
-            top: 50%;
-            left: 50%;
-
-            transform:
-                translate(-50%, -50%);
-
-            color: rgba(255,255,255,0.92);
-
-            font-size: 10rem;
-
-            filter:
-                drop-shadow(
-                    0 20px 30px
-                    rgba(0,0,0,0.18)
-                );
-        }
-
-        .about-badge {
-            position: absolute;
-
-            left: 28px;
-            bottom: 28px;
-
-            max-width: 240px;
-
-            padding: 18px 20px;
-
-            color: var(--navy);
-            background: var(--white);
-
-            border-radius: 12px;
-
-            box-shadow:
-                0 15px 35px rgba(0,0,0,0.18);
-        }
-
-        .about-badge strong {
-            display: block;
-
-            font-size: 1.3rem;
-        }
-
-        .about-badge span {
-            color: var(--text-light);
-
-            font-size: 0.8rem;
-        }
-
-        .about-content h2 {
-            margin: 0 0 20px;
-
-            color: var(--navy);
-
-            font-size: clamp(
-                2rem,
-                4vw,
-                3rem
-            );
-
-            line-height: 1.08;
-
-            letter-spacing: -0.04em;
-        }
-
-        .about-content > p {
-            color: var(--text-light);
-
-            font-size: 1.02rem;
-        }
-
-        .feature-list {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 15px;
-
-            padding: 0;
-            margin: 30px 0;
-        }
-
-        .feature {
-            display: flex;
-            gap: 12px;
-
-            padding: 16px;
-
-            background: var(--off-white);
-
-            border-radius: 10px;
-        }
-
-        .feature-icon {
-            color: var(--blue);
-
-            font-weight: 900;
-        }
-
-        .feature strong {
-            display: block;
-
-            color: var(--navy);
-
-            font-size: 0.88rem;
-        }
-
-        .feature span {
-            display: block;
-
-            color: var(--text-light);
-
-            font-size: 0.78rem;
-        }
-
-
-        /* =========================================================
-           EMERGENCY CTA
-           ========================================================= */
-
-        .emergency {
-            position: relative;
-            overflow: hidden;
-
-            background:
-                linear-gradient(
-                    110deg,
-                    #0878d1,
-                    #07528f
-                );
-
-            color: var(--white);
-        }
-
-        .emergency::after {
-            content: "⚡";
-
-            position: absolute;
-
-            right: 5%;
-            top: 50%;
-
-            transform: translateY(-50%);
-
-            color: rgba(255,255,255,0.08);
-
-            font-size: 16rem;
-        }
-
-        .emergency-inner {
-            position: relative;
-            z-index: 1;
-
-            display: flex;
-
-            align-items: center;
-            justify-content: space-between;
-
-            gap: 50px;
-
-            padding: 75px 0;
-        }
-
-        .emergency h2 {
-            margin: 0 0 10px;
-
-            font-size: clamp(
-                2rem,
-                4vw,
-                3rem
-            );
-
-            line-height: 1.05;
-
-            letter-spacing: -0.04em;
-        }
-
-        .emergency p {
-            max-width: 650px;
-
-            margin: 0;
-
-            color: #d8edfc;
-        }
-
-        .emergency-actions {
-            display: flex;
-            flex-shrink: 0;
-
-            gap: 10px;
-        }
-
-
-        /* =========================================================
-           SAFETY
-           ========================================================= */
-
-        .safety-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 24px;
-        }
-
-        .safety-card {
-            padding: 35px;
-
-            background: var(--white);
-
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-        }
-
-        .safety-card h3 {
-            margin: 0 0 20px;
-
-            color: var(--navy);
-
-            font-size: 1.3rem;
-        }
-
-        .safety-card ul {
-            padding: 0;
-            margin: 0;
-
-            list-style: none;
-        }
-
-        .safety-card li {
-            padding: 10px 0 10px 28px;
-
-            border-bottom: 1px solid var(--light);
-
-            position: relative;
-
-            color: var(--text-light);
-        }
-
-        .safety-card li:last-child {
-            border-bottom: 0;
-        }
-
-        .safety-card li::before {
-            content: "✓";
-
-            position: absolute;
-            left: 0;
-
-            color: var(--success);
-
-            font-weight: 900;
-        }
-
-
-        /* =========================================================
-           REVIEWS
-           ========================================================= */
-
-        .reviews {
-            background: var(--off-white);
-        }
-
-        .review-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 22px;
-        }
-
-        .review-card {
-            padding: 30px;
-
-            background: var(--white);
-
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-
-            box-shadow: var(--shadow-small);
-        }
-
-        .stars {
-            margin-bottom: 20px;
-
-            color: var(--yellow);
-
-            letter-spacing: 3px;
-        }
-
-        .review-card blockquote {
-            margin: 0 0 25px;
-
-            color: #35495c;
-
-            font-size: 0.96rem;
-            line-height: 1.7;
-        }
-
-        .review-author {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .review-avatar {
-            width: 42px;
-            height: 42px;
-
-            display: grid;
-            place-items: center;
-
-            color: var(--white);
-            background: var(--navy);
-
-            border-radius: 50%;
-
-            font-size: 0.85rem;
-            font-weight: 800;
-        }
-
-        .review-author strong {
-            display: block;
-
-            color: var(--navy);
-
-            font-size: 0.88rem;
-        }
-
-        .review-author span {
-            color: var(--text-light);
-
-            font-size: 0.75rem;
-        }
-
-
-        /* =========================================================
-           CONTACT
-           ========================================================= */
-
-        .contact-grid {
-            display: grid;
-
-            grid-template-columns:
-                0.85fr 1.15fr;
-
-            gap: 70px;
-
-            align-items: start;
-        }
-
-        .contact-info h2 {
-            margin: 0 0 18px;
-
-            color: var(--navy);
-
-            font-size: clamp(
-                2rem,
-                4vw,
-                3rem
-            );
-
-            line-height: 1.08;
-            letter-spacing: -0.04em;
-        }
-
-        .contact-info > p {
-            color: var(--text-light);
-        }
-
-        .contact-details {
-            display: grid;
-
-            gap: 16px;
-
-            margin-top: 30px;
-        }
-
-        .contact-detail {
-            display: flex;
-            gap: 15px;
-        }
-
-        .contact-detail-icon {
-            width: 45px;
-            height: 45px;
-
-            display: grid;
-            place-items: center;
-
-            flex-shrink: 0;
-
-            color: var(--blue);
-            background: #eaf5fd;
-
-            border-radius: 9px;
-        }
-
-        .contact-detail strong {
-            display: block;
-
-            color: var(--navy);
-
-            font-size: 0.9rem;
-        }
-
-        .contact-detail span,
-        .contact-detail a {
-            color: var(--text-light);
-
-            font-size: 0.88rem;
-        }
-
-        .contact-detail a:hover {
-            color: var(--blue);
-        }
-
-        .contact-form {
-            padding: 35px;
-
-            background: var(--white);
-
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-
-            box-shadow: var(--shadow);
-        }
-
-        .contact-form h3 {
-            margin: 0 0 7px;
-
-            color: var(--navy);
-
-            font-size: 1.4rem;
-        }
-
-        .contact-form > p {
-            margin: 0 0 25px;
-
-            color: var(--text-light);
-
-            font-size: 0.88rem;
-        }
-
-        .form-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 15px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-
-            gap: 6px;
-        }
-
-        .form-group.full {
-            grid-column: 1 / -1;
-        }
-
-        .form-group label {
-            color: var(--navy);
-
-            font-size: 0.8rem;
-            font-weight: 750;
-        }
-
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-
-            padding: 12px 14px;
-
-            color: var(--text);
-
-            background: #f9fbfd;
-
-            border: 1px solid var(--border);
-            border-radius: 7px;
-
-            outline: none;
-
-            transition:
-                border-color var(--transition),
-                box-shadow var(--transition);
-        }
-
-        .form-group textarea {
-            min-height: 125px;
-
-            resize: vertical;
-        }
-
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            border-color: var(--blue);
-
-            box-shadow:
-                0 0 0 3px
-                rgba(8,120,209,0.1);
-        }
-
-        .form-submit {
-            margin-top: 18px;
-        }
-
-
-        /* =========================================================
-           FOOTER
-           ========================================================= */
-
-        .footer {
-            color: #b5c5d4;
-
-            background: #041426;
-        }
-
-        .footer-main {
-            padding: 70px 0 50px;
-        }
-
-        .footer-grid {
-            display: grid;
-
-            grid-template-columns:
-                1.4fr 1fr 1fr 1fr;
-
-            gap: 50px;
-        }
-
-        .footer-brand {
-            max-width: 330px;
-        }
-
-        .footer-brand .logo {
-            color: var(--white);
-            margin-bottom: 20px;
-        }
-
-        .footer-brand p {
-            color: #8fa3b7;
-
-            font-size: 0.88rem;
-        }
-
-        .footer h4 {
-            margin: 0 0 17px;
-
-            color: var(--white);
-
-            font-size: 0.88rem;
-        }
-
-        .footer-links {
-            list-style: none;
-
-            padding: 0;
-            margin: 0;
-        }
-
-        .footer-links li {
-            margin-bottom: 9px;
-        }
-
-        .footer-links a {
-            color: #8fa3b7;
-
-            font-size: 0.83rem;
-
-            transition: color var(--transition);
-        }
-
-        .footer-links a:hover {
-            color: var(--white);
-        }
-
-        .footer-bottom {
-            padding: 22px 0;
-
-            border-top:
-                1px solid
-                rgba(255,255,255,0.08);
-
-            color: #70869a;
-
-            font-size: 0.75rem;
-        }
-
-        .footer-bottom-inner {
-            display: flex;
-
-            justify-content: space-between;
-            align-items: center;
-
-            gap: 20px;
-        }
-
-
-        /* =========================================================
-           MOBILE CALL BAR
-           ========================================================= */
-
-        .mobile-call {
-            display: none;
-        }
-
-
-        /* =========================================================
-           RESPONSIVE
-           ========================================================= */
-
-        @media (max-width: 1050px) {
-
-            .nav-links {
-                gap: 0;
-            }
-
-            .nav-links a {
-                padding-inline: 9px;
-                font-size: 0.85rem;
-            }
-
-            .nav-phone {
-                display: none;
-            }
-
-            .hero-inner {
-                grid-template-columns: 1fr 0.75fr;
-                gap: 40px;
-            }
-
-            .footer-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-        }
-
-
-        @media (max-width: 850px) {
-
-            .topbar {
-                display: none;
-            }
-
-            .header {
-                position: relative;
-            }
-
-            .nav {
-                min-height: 68px;
-            }
-
-            .mobile-menu {
-                display: block;
-            }
-
-            .nav-links {
-                position: absolute;
-
-                top: 68px;
-                left: 20px;
-                right: 20px;
-
-                display: none;
-                flex-direction: column;
-                align-items: stretch;
-
-                padding: 10px;
-
-                background: var(--white);
-
-                border:
-                    1px solid var(--border);
-
-                border-radius: 10px;
-
-                box-shadow: var(--shadow);
-
-                z-index: 100;
-            }
-
-            .nav-links.open {
-                display: flex;
-            }
-
-            .nav-links a {
-                padding: 13px;
-            }
-
-            .nav-cta .btn {
-                display: none;
-            }
-
-            .hero-inner {
-                min-height: auto;
-
-                grid-template-columns: 1fr;
-
-                padding: 75px 0 85px;
-            }
-
-            .hero-visual {
-                min-height: 330px;
-            }
-
-            .electric-card {
-                width: 320px;
-            }
-
-            .trust-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .services-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-
-            .about-visual {
-                min-height: 400px;
-            }
-
-            .emergency-inner {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .review-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .contact-grid {
-                grid-template-columns: 1fr;
-                gap: 50px;
-            }
-        }
-
-
-        @media (max-width: 600px) {
-
-            .container {
-                width: min(
-                    calc(100% - 30px),
-                    var(--container)
-                );
-            }
-
-            .section {
-                padding: 70px 0;
-            }
-
-            .hero-inner {
-                padding: 60px 0 70px;
-            }
-
-            .hero h1 {
-                font-size: 2.75rem;
-            }
-
-            .hero p {
-                font-size: 1rem;
-            }
-
-            .hero-buttons {
-                flex-direction: column;
-                align-items: stretch;
-            }
-
-            .hero-buttons .btn {
-                width: 100%;
-            }
-
-            .hero-trust {
-                display: grid;
-                gap: 12px;
-                margin-top: 30px;
-            }
-
-            .hero-visual {
-                min-height: 300px;
-            }
-
-            .electric-card {
-                width: 280px;
-            }
-
-            .bolt {
-                font-size: 9rem;
-            }
-
-            .trust-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .trust-item {
-                min-height: 80px;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .service-card {
-                padding: 27px;
-            }
-
-            .feature-list {
-                grid-template-columns: 1fr;
-            }
-
-            .about-visual {
-                min-height: 340px;
-            }
-
-            .about-symbol {
-                font-size: 7rem;
-            }
-
-            .emergency {
-                text-align: left;
-            }
-
-            .emergency-inner {
-                padding: 60px 0;
-                gap: 30px;
-            }
-
-            .emergency-actions {
-                width: 100%;
-
-                flex-direction: column;
-            }
-
-            .emergency-actions .btn {
-                width: 100%;
-            }
-
-            .safety-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .safety-card {
-                padding: 27px;
-            }
-
-            .contact-form {
-                padding: 25px 20px;
-            }
-
-            .form-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .form-group.full {
-                grid-column: auto;
-            }
-
-            .footer-grid {
-                grid-template-columns: 1fr;
-                gap: 35px;
-            }
-
-            .footer-bottom-inner {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .mobile-call {
-                position: fixed;
-
-                left: 0;
-                right: 0;
-                bottom: 0;
-
-                z-index: 2000;
-
-                display: flex;
-
-                padding:
-                    10px 15px
-                    calc(10px + env(safe-area-inset-bottom));
-
-                background: var(--navy);
-
-                box-shadow:
-                    0 -5px 25px
-                    rgba(0,0,0,0.15);
-            }
-
-            .mobile-call a {
-                width: 100%;
-
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 10px;
-
-                min-height: 48px;
-
-                color: var(--navy);
-                background: var(--yellow);
-
-                border-radius: 7px;
-
-                font-weight: 900;
-            }
-
-            body {
-                padding-bottom: 75px;
-            }
-        }
-
-
-        /* =========================================================
-           ACCESSIBILITY
-           ========================================================= */
-
-        :focus-visible {
-            outline:
-                3px solid
-                rgba(20,152,255,0.45);
-
-            outline-offset: 3px;
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-
-            html {
-                scroll-behavior: auto;
-            }
-
-            *,
-            *::before,
-            *::after {
-                transition: none !important;
-                animation: none !important;
-            }
-        }
-    </style>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Manchester Electric provides professional domestic, commercial and industrial electrical services across Manchester and Greater Manchester. Free quotes, emergency electricians and electrical safety services."
+    >
+
+    <meta
+        name="theme-color"
+        content="#071a2f"
+    >
+
+    <title>Manchester Electric | Professional Electricians in Manchester</title>
+
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 
 <body>
 
-
     <!-- =========================================================
-         TOP BAR
-         ========================================================= -->
+         HEADER
+    ========================================================== -->
 
-    <div class="topbar">
-        <div class="container topbar-inner">
+    <header class="site-header">
 
-            <div class="topbar-left">
-                <span>Manchester Electric Ltd</span>
-                <span>Electrical Contractors</span>
-            </div>
+        <div class="container header-inner">
 
-            <div class="topbar-right">
-                <a href="mailto:ask@manchesterelectric.co.uk">
-                    ask@manchesterelectric.co.uk
-                </a>
-
-                <a href="tel:01618501610">
-                    <strong>0161 850 1610</strong>
-                </a>
-            </div>
-
-        </div>
-    </div>
-
-
-    <!-- =========================================================
-         HEADER / NAVIGATION
-         ========================================================= -->
-
-    <header class="header">
-
-        <div class="container nav">
-
-            <a href="#home" class="logo" aria-label="Manchester Electric home">
-
-                <span class="logo-mark">⚡</span>
-
-                <span>
-                    Manchester Electric
-                    <small>Electrical Contractors</small>
+            <a href="#top" class="logo" aria-label="Manchester Electric home">
+                <span class="logo-mark" aria-hidden="true">
+                    <svg viewBox="0 0 48 48" role="img">
+                        <path d="M27.8 2 10 26.1h11.4L19.8 46 38 20.5H26.2L27.8 2Z"
+                              fill="currentColor"/>
+                    </svg>
                 </span>
 
+                <span class="logo-text">
+                    <strong>Manchester</strong>
+                    <span>Electric</span>
+                </span>
             </a>
 
 
-            <nav aria-label="Main navigation">
+            <nav class="main-nav" aria-label="Main navigation">
 
-                <button
-                    class="mobile-menu"
-                    id="mobileMenu"
-                    aria-label="Open navigation"
-                    aria-expanded="false"
+                <a href="#services">Services</a>
+                <a href="#about">About</a>
+                <a href="#safety">Safety</a>
+                <a href="#reviews">Reviews</a>
+                <a href="#contact">Contact</a>
+
+                <a
+                    href="tel:01618501610"
+                    class="nav-call"
                 >
-                    ☰
-                </button>
-
-                <ul class="nav-links" id="navLinks">
-
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
-
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-
-                    <li>
-                        <a href="#services">Services</a>
-                    </li>
-
-                    <li>
-                        <a href="#safety">Safety</a>
-                    </li>
-
-                    <li>
-                        <a href="#reviews">Reviews</a>
-                    </li>
-
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-
-                </ul>
+                    Call 0161 850 1610
+                </a>
 
             </nav>
 
 
-            <div class="nav-cta">
+            <button
+                class="mobile-menu-button"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="mobile-navigation"
+            >
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
 
-                <a
-                    class="nav-phone"
-                    href="tel:01618501610"
-                >
-                    0161 850 1610
-                </a>
+        </div>
 
-                <a
-                    class="btn btn-primary"
-                    href="#contact"
-                >
-                    Get a quote
-                </a>
 
-            </div>
+        <!-- Mobile navigation -->
+
+        <div
+            class="mobile-navigation"
+            id="mobile-navigation"
+        >
+
+            <a href="#services">Services</a>
+            <a href="#about">About Us</a>
+            <a href="#safety">Safety</a>
+            <a href="#emergency">Emergency Repairs</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#contact">Contact</a>
+
+            <a
+                href="tel:01618501610"
+                class="mobile-call"
+            >
+                Call 0161 850 1610
+            </a>
 
         </div>
 
     </header>
 
 
-    <main>
-
+    <main id="top">
 
         <!-- =====================================================
              HERO
-             ===================================================== -->
+        ====================================================== -->
 
-        <section class="hero" id="home">
+        <section class="hero">
 
-            <div class="container hero-inner">
+            <div class="hero-background"></div>
 
-                <div class="hero-content">
+            <div class="container hero-content">
 
-                    <div class="hero-badge">
-                        <span></span>
+                <div class="hero-copy">
+
+                    <div class="eyebrow">
+                        <span class="eyebrow-line"></span>
                         Trusted electrical contractors
                     </div>
 
                     <h1>
-                        Electrical work,
-                        <span>done properly.</span>
+                        Professional electricians
+                        <span>across Manchester.</span>
                     </h1>
 
-                    <p>
-                        Professional electrical installation,
-                        maintenance and repair services for homes,
-                        businesses and industrial premises across
-                        Manchester and Greater Manchester.
+                    <p class="hero-text">
+                        Reliable electrical installation, maintenance,
+                        testing and emergency services for homes,
+                        businesses and industrial premises.
                     </p>
 
-                    <div class="hero-buttons">
+                    <div class="hero-actions">
 
                         <a
-                            class="btn btn-primary"
-                            href="#contact"
+                            href="tel:01618501610"
+                            class="button button-primary"
                         >
-                            Request a free quote
-                            →
+                            Call us today
+                            <span aria-hidden="true">→</span>
                         </a>
 
                         <a
-                            class="btn btn-outline"
-                            href="tel:01618501610"
+                            href="#contact"
+                            class="button button-secondary"
                         >
-                            Call 0161 850 1610
+                            Request a free quote
                         </a>
 
                     </div>
 
-
                     <div class="hero-trust">
 
-                        <div class="hero-trust-item">
-                            <span class="check">✓</span>
-                            Registered & approved
+                        <div class="trust-item">
+                            <span class="trust-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 3 4.5 6v5.5c0 4.6 3.1 8.7 7.5 9.5 4.4-.8 7.5-4.9 7.5-9.5V6L12 3Z"/>
+                                    <path d="m8.5 12 2.2 2.2 4.8-5"/>
+                                </svg>
+                            </span>
+                            <span>Registered &amp; approved</span>
                         </div>
 
-                        <div class="hero-trust-item">
-                            <span class="check">✓</span>
-                            Free accurate quotations
+                        <div class="trust-item">
+                            <span class="trust-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <circle cx="12" cy="12" r="8.5"/>
+                                    <path d="M12 7.5v5l3.2 2"/>
+                                </svg>
+                            </span>
+                            <span>24/7 emergency support</span>
                         </div>
 
-                        <div class="hero-trust-item">
-                            <span class="check">✓</span>
-                            5 year guarantee
+                        <div class="trust-item">
+                            <span class="trust-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 3.5 14.6 9l5.9.7-4.4 4 1.2 5.8-5.3-3-5.3 3 1.2-5.8-4.4-4L9.4 9 12 3.5Z"/>
+                                </svg>
+                            </span>
+                            <span>5 year guarantee</span>
                         </div>
 
                     </div>
@@ -2071,25 +192,41 @@
                 </div>
 
 
-                <div class="hero-visual">
+                <div class="hero-card">
 
-                    <div class="electric-card">
+                    <div class="hero-card-top">
 
-                        <div class="bolt">
-                            ⚡
-                        </div>
+                        <span class="status-dot"></span>
 
-                        <div class="card-label">
-                            <strong>
-                                Domestic · Commercial · Industrial
-                            </strong>
-
-                            <span>
-                                Electrical services across Greater Manchester
-                            </span>
-                        </div>
+                        <span>Need an electrician?</span>
 
                     </div>
+
+                    <h2>
+                        Let's get your electrical
+                        work sorted.
+                    </h2>
+
+                    <p>
+                        From a single socket to a complete commercial
+                        installation, speak to our team today.
+                    </p>
+
+                    <a
+                        href="tel:01618501610"
+                        class="hero-card-phone"
+                    >
+                        <span class="phone-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6.7 3.5 9.2 3c.6-.1 1.2.2 1.4.8l1.1 3c.2.5 0 1-.4 1.4L9.8 9.7c1 2 2.5 3.5 4.5 4.5l1.5-1.5c.4-.4.9-.5 1.4-.4l3 1.1c.6.2.9.8.8 1.4l-.5 2.5c-.1.6-.7 1-1.3 1C11 18.3 5.7 13 5.7 6.8c0-.6.4-1.2 1-1.3Z"/>
+                            </svg>
+                        </span>
+
+                        <span>
+                            <small>Call our team</small>
+                            <strong>0161 850 1610</strong>
+                        </span>
+                    </a>
 
                 </div>
 
@@ -2099,61 +236,110 @@
 
 
         <!-- =====================================================
-             TRUST BAR
-             ===================================================== -->
+             QUICK SERVICES
+        ====================================================== -->
 
-        <section class="trust-bar">
+        <section class="quick-services">
 
-            <div class="container">
+            <div class="container quick-services-grid">
 
-                <div class="trust-grid">
+                <a href="#services" class="quick-service">
+                    <span class="quick-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 20h16M6 20V9l6-5 6 5v11M9 20v-6h6v6"/>
+                        </svg>
+                    </span>
+                    <span>
+                        <strong>Domestic</strong>
+                        <small>Electrical services</small>
+                    </span>
+                </a>
 
-                    <div class="trust-item">
+                <a href="#services" class="quick-service">
+                    <span class="quick-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M4 20h16M5 20V9h14v11M8 9V5h8v4M9 13h6M9 16h6"/>
+                        </svg>
+                    </span>
+                    <span>
+                        <strong>Commercial</strong>
+                        <small>Electrical contractors</small>
+                    </span>
+                </a>
 
-                        <div class="trust-icon">✓</div>
+                <a href="#services" class="quick-service">
+                    <span class="quick-icon">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M3.5 20.5h17M5 20.5V9h14v11.5M8 9V5.5h8V9M8 13h2M14 13h2M8 16.5h2M14 16.5h2"/>
+                        </svg>
+                    </span>
+                    <span>
+                        <strong>Industrial</strong>
+                        <small>Electrical engineering</small>
+                    </span>
+                </a>
 
-                        <div>
-                            <strong>Professional service</strong>
-                            <span>Qualified electrical engineers</span>
-                        </div>
+                <a href="#emergency" class="quick-service">
+                    <span class="quick-icon quick-icon-alert">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M12 3 2.8 20h18.4L12 3Z"/>
+                            <path d="M12 9v5M12 17.2v.1"/>
+                        </svg>
+                    </span>
+                    <span>
+                        <strong>Emergency</strong>
+                        <small>24/7 electrical repairs</small>
+                    </span>
+                </a>
 
-                    </div>
+            </div>
 
-
-                    <div class="trust-item">
-
-                        <div class="trust-icon">£</div>
-
-                        <div>
-                            <strong>Fair pricing</strong>
-                            <span>Clear, accurate quotations</span>
-                        </div>
-
-                    </div>
-
-
-                    <div class="trust-item">
-
-                        <div class="trust-icon">★</div>
-
-                        <div>
-                            <strong>5 year guarantee</strong>
-                            <span>Peace of mind after completion</span>
-                        </div>
-
-                    </div>
+        </section>
 
 
-                    <div class="trust-item">
+        <!-- =====================================================
+             INTRO / ABOUT
+        ====================================================== -->
 
-                        <div class="trust-icon">24</div>
+        <section class="section about-section" id="about">
 
-                        <div>
-                            <strong>Emergency support</strong>
-                            <span>Electrical faults and repairs</span>
-                        </div>
+            <div class="container about-grid">
 
-                    </div>
+                <div class="section-label">
+                    <span>01</span>
+                    <span>Manchester Electric</span>
+                </div>
+
+                <div class="about-content">
+
+                    <h2 class="section-title">
+                        Electrical work done
+                        <span>properly.</span>
+                    </h2>
+
+                    <p class="lead">
+                        We provide professional electrical installation
+                        and maintenance services throughout Manchester,
+                        Greater Manchester and the North West.
+                    </p>
+
+                    <p>
+                        From straightforward domestic repairs through to
+                        commercial and industrial electrical projects,
+                        our aim is simple: quality workmanship, clear
+                        communication and dependable service.
+                    </p>
+
+                    <p>
+                        We offer free, accurate quotations and work with
+                        customers to find practical solutions that meet
+                        their requirements and budget.
+                    </p>
+
+                    <a href="#contact" class="text-link">
+                        Talk to our team
+                        <span aria-hidden="true">→</span>
+                    </a>
 
                 </div>
 
@@ -2164,187 +350,243 @@
 
         <!-- =====================================================
              SERVICES
-             ===================================================== -->
+        ====================================================== -->
 
-        <section class="section section-light" id="services">
+        <section
+            class="section services-section section-dark"
+            id="services"
+        >
 
             <div class="container">
 
-                <div class="section-heading">
+                <div class="section-heading centered">
 
-                    <div class="eyebrow">
+                    <div class="eyebrow eyebrow-light">
+                        <span class="eyebrow-line"></span>
                         What we do
                     </div>
 
-                    <h2>
-                        Electrical services for every type of property.
+                    <h2 class="section-title">
+                        Electrical services
+                        <span>for every requirement.</span>
                     </h2>
 
                     <p>
-                        From small domestic repairs to larger commercial
-                        and industrial installations, our team provides
-                        practical electrical solutions tailored to your
-                        requirements.
+                        Professional electrical services for homes,
+                        businesses and industrial premises.
                     </p>
 
                 </div>
 
 
-                <div class="services-grid">
+                <div class="service-grid">
 
+                    <!-- Domestic -->
 
                     <article class="service-card">
 
+                        <div class="service-number">01</div>
+
                         <div class="service-icon">
-                            🏠
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3.5 11.5 12 4l8.5 7.5"/>
+                                <path d="M5.5 10v10h13V10M9 20v-6h6v6"/>
+                            </svg>
                         </div>
 
-                        <h3>
-                            Domestic electricians
-                        </h3>
+                        <h3>Domestic electricians</h3>
 
                         <p>
-                            Reliable electrical services for homeowners,
-                            landlords and residential properties.
+                            Electrical repairs, installations,
+                            improvements and maintenance for homes
+                            throughout Manchester.
                         </p>
 
                         <ul>
-                            <li>Sockets & lighting</li>
-                            <li>Fault finding & repairs</li>
+                            <li>Sockets &amp; lighting</li>
+                            <li>Consumer units</li>
                             <li>Rewiring</li>
-                            <li>Electrical inspections</li>
+                            <li>Fault finding</li>
                         </ul>
+
+                        <a href="#contact" class="card-link">
+                            Find out more <span>→</span>
+                        </a>
 
                     </article>
 
 
-                    <article class="service-card">
+                    <!-- Commercial -->
+
+                    <article class="service-card featured">
+
+                        <div class="service-number">02</div>
 
                         <div class="service-icon">
-                            🏢
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 20V7h16v13M8 7V4h8v3"/>
+                                <path d="M8 11h2M14 11h2M8 15h2M14 15h2M8 20v-3h8v3"/>
+                            </svg>
                         </div>
 
-                        <h3>
-                            Commercial electricians
-                        </h3>
+                        <h3>Commercial electricians</h3>
 
                         <p>
-                            Electrical installation, maintenance and
-                            testing for offices, businesses and commercial
-                            premises.
+                            Reliable electrical installation,
+                            maintenance and testing for commercial
+                            premises and businesses.
                         </p>
 
                         <ul>
                             <li>Commercial installations</li>
-                            <li>EIC reports</li>
+                            <li>Electrical testing</li>
                             <li>PAT testing</li>
                             <li>Emergency lighting</li>
                         </ul>
 
+                        <a href="#contact" class="card-link">
+                            Find out more <span>→</span>
+                        </a>
+
                     </article>
 
 
+                    <!-- Industrial -->
+
                     <article class="service-card">
 
+                        <div class="service-number">03</div>
+
                         <div class="service-icon">
-                            ⚙
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M3 20V9l5-3v4l5-3v4l5-3v12"/>
+                                <path d="M3 20h18M7 15h2M12 15h2M17 15h2"/>
+                            </svg>
                         </div>
 
-                        <h3>
-                            Industrial electrical
-                        </h3>
+                        <h3>Industrial electricians</h3>
 
                         <p>
-                            Electrical engineering and maintenance support
-                            for industrial environments and machinery.
+                            Electrical services for industrial
+                            environments, machinery, power supplies
+                            and communications systems.
                         </p>
 
                         <ul>
                             <li>3-phase systems</li>
                             <li>Machinery connections</li>
+                            <li>Temporary power</li>
                             <li>Electrical maintenance</li>
-                            <li>Communications systems</li>
                         </ul>
+
+                        <a href="#contact" class="card-link">
+                            Find out more <span>→</span>
+                        </a>
 
                     </article>
 
 
-                    <article class="service-card">
-
-                        <div class="service-icon">
-                            💡
-                        </div>
-
-                        <h3>
-                            Lighting & power
-                        </h3>
-
-                        <p>
-                            Safe, practical electrical improvements for
-                            lighting, sockets and power requirements.
-                        </p>
-
-                        <ul>
-                            <li>New sockets</li>
-                            <li>Lighting installation</li>
-                            <li>Energy saving solutions</li>
-                            <li>Electrical upgrades</li>
-                        </ul>
-
-                    </article>
-
+                    <!-- Fire & Security -->
 
                     <article class="service-card">
 
+                        <div class="service-number">04</div>
+
                         <div class="service-icon">
-                            🔥
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 3 4.5 6v5.5c0 4.6 3.1 8.7 7.5 9.5 4.4-.8 7.5-4.9 7.5-9.5V6L12 3Z"/>
+                                <path d="M9.5 12a2.5 2.5 0 0 1 5 0c0 2-2.5 3.5-2.5 3.5S9.5 14 9.5 12Z"/>
+                            </svg>
                         </div>
 
-                        <h3>
-                            Fire & security
-                        </h3>
+                        <h3>Fire &amp; security</h3>
 
                         <p>
-                            Electrical services supporting fire alarm,
+                            Electrical services supporting fire,
                             security and building management systems.
                         </p>
 
                         <ul>
                             <li>Fire alarm systems</li>
-                            <li>Fire alarm maintenance</li>
+                            <li>Emergency lighting</li>
                             <li>Security systems</li>
                             <li>Building management</li>
                         </ul>
 
+                        <a href="#contact" class="card-link">
+                            Find out more <span>→</span>
+                        </a>
+
                     </article>
 
 
+                    <!-- Testing -->
+
                     <article class="service-card">
 
+                        <div class="service-number">05</div>
+
                         <div class="service-icon">
-                            📋
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 3h12v18H6z"/>
+                                <path d="m9 12 2 2 4-5"/>
+                            </svg>
                         </div>
 
-                        <h3>
-                            Testing & certification
-                        </h3>
+                        <h3>Testing &amp; certification</h3>
 
                         <p>
-                            Inspection and testing services helping
-                            property owners and businesses maintain safe
-                            electrical installations.
+                            Electrical inspection and testing to help
+                            keep properties safe and compliant.
                         </p>
 
                         <ul>
                             <li>EICR reports</li>
-                            <li>Landlord certificates</li>
-                            <li>Periodic inspections</li>
+                            <li>Landlord reports</li>
                             <li>PAT testing</li>
+                            <li>Periodic inspection</li>
                         </ul>
+
+                        <a href="#contact" class="card-link">
+                            Find out more <span>→</span>
+                        </a>
 
                     </article>
 
 
+                    <!-- Energy -->
+
+                    <article class="service-card">
+
+                        <div class="service-number">06</div>
+
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M13.5 2 5 13h6l-1 9 8.5-11h-6l1-9Z"/>
+                            </svg>
+                        </div>
+
+                        <h3>Energy solutions</h3>
+
+                        <p>
+                            Practical electrical solutions designed to
+                            improve efficiency and reduce unnecessary
+                            energy use.
+                        </p>
+
+                        <ul>
+                            <li>Energy saving solutions</li>
+                            <li>Efficient lighting</li>
+                            <li>Electrical upgrades</li>
+                            <li>System improvements</li>
+                        </ul>
+
+                        <a href="#contact" class="card-link">
+                            Find out more <span>→</span>
+                        </a>
+
+                    </article>
+
                 </div>
 
             </div>
@@ -2353,194 +595,102 @@
 
 
         <!-- =====================================================
-             ABOUT
-             ===================================================== -->
+             WHY CHOOSE US
+        ====================================================== -->
 
-        <section class="section" id="about">
+        <section class="section benefits-section">
 
-            <div class="container about-grid">
+            <div class="container benefits-grid">
 
-
-                <div class="about-visual">
-
-                    <div class="about-symbol">
-                        ⚡
-                    </div>
-
-                    <div class="about-badge">
-
-                        <strong>
-                            Manchester based
-                        </strong>
-
-                        <span>
-                            Serving Manchester, Greater Manchester
-                            and the wider North West.
-                        </span>
-
-                    </div>
-
-                </div>
-
-
-                <div class="about-content">
+                <div class="benefits-intro">
 
                     <div class="eyebrow">
-                        About Manchester Electric
+                        <span class="eyebrow-line"></span>
+                        Why Manchester Electric
                     </div>
 
-                    <h2>
-                        Professional workmanship.
+                    <h2 class="section-title">
                         Straightforward service.
+                        <span>Quality work.</span>
                     </h2>
 
                     <p>
-                        Manchester Electric provides electrical
-                        installation and maintenance services for
-                        domestic, commercial and industrial customers.
+                        We believe electrical work should be clear,
+                        professional and hassle-free from the initial
+                        quotation through to completion.
                     </p>
-
-                    <p>
-                        We aim to combine high-quality workmanship with
-                        practical advice and fair pricing, whether you
-                        need a small repair, electrical inspection or a
-                        larger installation project.
-                    </p>
-
-
-                    <div class="feature-list">
-
-                        <div class="feature">
-
-                            <div class="feature-icon">
-                                ✓
-                            </div>
-
-                            <div>
-                                <strong>
-                                    Registered & approved
-                                </strong>
-
-                                <span>
-                                    Professional electrical contractors
-                                </span>
-                            </div>
-
-                        </div>
-
-
-                        <div class="feature">
-
-                            <div class="feature-icon">
-                                ✓
-                            </div>
-
-                            <div>
-                                <strong>
-                                    Fixed-price quotations
-                                </strong>
-
-                                <span>
-                                    Clear pricing before work begins
-                                </span>
-                            </div>
-
-                        </div>
-
-
-                        <div class="feature">
-
-                            <div class="feature-icon">
-                                ✓
-                            </div>
-
-                            <div>
-                                <strong>
-                                    Quality workmanship
-                                </strong>
-
-                                <span>
-                                    High standards across every job
-                                </span>
-                            </div>
-
-                        </div>
-
-
-                        <div class="feature">
-
-                            <div class="feature-icon">
-                                ✓
-                            </div>
-
-                            <div>
-                                <strong>
-                                    Customer focused
-                                </strong>
-
-                                <span>
-                                    Friendly advice and practical solutions
-                                </span>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <a
-                        href="#contact"
-                        class="btn btn-dark"
-                    >
-                        Talk to our team
-                        →
-                    </a>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- =====================================================
-             EMERGENCY
-             ===================================================== -->
-
-        <section class="emergency">
-
-            <div class="container emergency-inner">
-
-                <div>
-
-                    <h2>
-                        Electrical emergency?
-                    </h2>
-
-                    <p>
-                        Fault diagnosis and emergency electrical
-                        assistance for domestic, commercial and
-                        industrial customers.
-                    </p>
-
-                </div>
-
-
-                <div class="emergency-actions">
 
                     <a
                         href="tel:01618501610"
-                        class="btn btn-light"
+                        class="button button-dark"
                     >
-                        Call 0161 850 1610
+                        Speak to an electrician
+                        <span>→</span>
                     </a>
 
-                    <a
-                        href="#contact"
-                        class="btn btn-outline"
-                    >
-                        Send an enquiry
-                    </a>
+                </div>
+
+
+                <div class="benefit-list">
+
+                    <div class="benefit">
+
+                        <span class="benefit-number">01</span>
+
+                        <div>
+                            <h3>Free accurate quotes</h3>
+                            <p>
+                                Clear quotations with no unnecessary
+                                surprises.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <span class="benefit-number">02</span>
+
+                        <div>
+                            <h3>Professional workmanship</h3>
+                            <p>
+                                High standards of work from experienced
+                                electrical professionals.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <span class="benefit-number">03</span>
+
+                        <div>
+                            <h3>5 year guarantee</h3>
+                            <p>
+                                Added peace of mind with a free 5 year
+                                guarantee on qualifying work.
+                            </p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="benefit">
+
+                        <span class="benefit-number">04</span>
+
+                        <div>
+                            <h3>Local electrical support</h3>
+                            <p>
+                                Based in Manchester and serving customers
+                                throughout Greater Manchester.
+                            </p>
+                        </div>
+
+                    </div>
 
                 </div>
 
@@ -2551,101 +701,175 @@
 
         <!-- =====================================================
              SAFETY
-             ===================================================== -->
+        ====================================================== -->
 
-        <section class="section section-light" id="safety">
+        <section
+            class="section safety-section"
+            id="safety"
+        >
 
-            <div class="container">
+            <div class="container safety-grid">
 
-                <div class="section-heading">
+                <div class="safety-content">
 
                     <div class="eyebrow">
+                        <span class="eyebrow-line"></span>
                         Electrical safety
                     </div>
 
+                    <h2 class="section-title">
+                        Keep your property
+                        <span>electrically safe.</span>
+                    </h2>
+
+                    <p class="lead">
+                        Regular inspection, testing and maintenance
+                        can help identify electrical problems before
+                        they become serious.
+                    </p>
+
+                    <p>
+                        We provide electrical testing and inspection
+                        services for domestic, commercial and industrial
+                        properties, including EIC reports, PAT testing,
+                        fire alarm maintenance and emergency lighting.
+                    </p>
+
+                    <a href="#contact" class="text-link">
+                        Arrange an inspection
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+
+                <div class="safety-cards">
+
+                    <div class="safety-card">
+
+                        <span class="safety-card-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M6 4h12v16H6z"/>
+                                <path d="M9 8h6M9 12h6M9 16h4"/>
+                            </svg>
+                        </span>
+
+                        <h3>EICR reports</h3>
+
+                        <p>
+                            Electrical Installation Condition Reports
+                            for homes, landlords and commercial premises.
+                        </p>
+
+                    </div>
+
+
+                    <div class="safety-card">
+
+                        <span class="safety-card-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 4a7 7 0 0 1 7 7v5H5v-5a7 7 0 0 1 7-7Z"/>
+                                <path d="M9 20h6M12 16v4"/>
+                            </svg>
+                        </span>
+
+                        <h3>Fire safety</h3>
+
+                        <p>
+                            Fire alarm maintenance and emergency lighting
+                            support for commercial environments.
+                        </p>
+
+                    </div>
+
+
+                    <div class="safety-card">
+
+                        <span class="safety-card-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M4 12a8 8 0 0 1 16 0"/>
+                                <path d="M4 12v4h3v-4M20 12v4h-3v-4"/>
+                                <path d="M7 17c1.5 2 3.5 3 5 3s3.5-1 5-3"/>
+                            </svg>
+                        </span>
+
+                        <h3>PAT testing</h3>
+
+                        <p>
+                            Portable appliance testing to support
+                            electrical safety in the workplace.
+                        </p>
+
+                    </div>
+
+
+                    <div class="safety-card">
+
+                        <span class="safety-card-icon">
+                            <svg viewBox="0 0 24 24" aria-hidden="true">
+                                <path d="M12 3 4.5 6v5.5c0 4.6 3.1 8.7 7.5 9.5 4.4-.8 7.5-4.9 7.5-9.5V6L12 3Z"/>
+                                <path d="M12 8v4l2.5 1.5"/>
+                            </svg>
+                        </span>
+
+                        <h3>Periodic testing</h3>
+
+                        <p>
+                            Planned inspections to identify deterioration,
+                            damage and potential electrical faults.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =====================================================
+             EMERGENCY
+        ====================================================== -->
+
+        <section
+            class="emergency-section"
+            id="emergency"
+        >
+
+            <div class="container emergency-inner">
+
+                <div class="emergency-icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <path d="M12 3 2.8 20h18.4L12 3Z"/>
+                        <path d="M12 9v5M12 17.2v.1"/>
+                    </svg>
+                </div>
+
+                <div class="emergency-content">
+
+                    <span class="emergency-label">
+                        Electrical emergency?
+                    </span>
+
                     <h2>
-                        Safety comes first.
+                        Fast help when you need it.
                     </h2>
 
                     <p>
-                        Electrical installations should be regularly
-                        inspected, maintained and repaired by suitably
-                        qualified professionals.
+                        Fault diagnosis and emergency electrical repairs
+                        for domestic, commercial and industrial customers.
                     </p>
 
                 </div>
 
-
-                <div class="safety-grid">
-
-
-                    <div class="safety-card">
-
-                        <h3>
-                            At home
-                        </h3>
-
-                        <ul>
-
-                            <li>
-                                Basic electrical safety checks
-                            </li>
-
-                            <li>
-                                Use a registered electrician
-                            </li>
-
-                            <li>
-                                Smoke detector checks
-                            </li>
-
-                            <li>
-                                Electrical fault diagnosis
-                            </li>
-
-                            <li>
-                                Home electrical inspections
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-
-                    <div class="safety-card">
-
-                        <h3>
-                            In the workplace
-                        </h3>
-
-                        <ul>
-
-                            <li>
-                                Periodic electrical testing
-                            </li>
-
-                            <li>
-                                Electrical Installation Condition Reports
-                            </li>
-
-                            <li>
-                                PAT testing
-                            </li>
-
-                            <li>
-                                Fire alarm maintenance
-                            </li>
-
-                            <li>
-                                Emergency lighting
-                            </li>
-
-                        </ul>
-
-                    </div>
-
-
-                </div>
+                <a
+                    href="tel:01618501610"
+                    class="button button-light"
+                >
+                    Call 0161 850 1610
+                    <span>→</span>
+                </a>
 
             </div>
 
@@ -2654,63 +878,82 @@
 
         <!-- =====================================================
              REVIEWS
-             ===================================================== -->
+        ====================================================== -->
 
-        <section class="section reviews" id="reviews">
+        <section
+            class="section reviews-section"
+            id="reviews"
+        >
 
             <div class="container">
 
-                <div class="section-heading">
+                <div class="section-heading reviews-heading">
 
-                    <div class="eyebrow">
-                        Customer feedback
+                    <div>
+                        <div class="eyebrow">
+                            <span class="eyebrow-line"></span>
+                            Customer feedback
+                        </div>
+
+                        <h2 class="section-title">
+                            What our customers
+                            <span>say.</span>
+                        </h2>
                     </div>
 
-                    <h2>
-                        Trusted by our customers.
-                    </h2>
-
-                    <p>
-                        Good electrical work should be professional,
-                        tidy and dependable. Here's what some customers
-                        have said about their experience.
-                    </p>
+                    <a href="#contact" class="text-link">
+                        Start your project
+                        <span>→</span>
+                    </a>
 
                 </div>
 
 
                 <div class="review-grid">
 
-
                     <article class="review-card">
 
-                        <div class="stars">
+                        <div class="stars" aria-label="5 star review">
                             ★★★★★
                         </div>
 
                         <blockquote>
-                            "He responded quickly then came out to give
-                            a quote. The team were professional and tidy
-                            and the work was neat. Very happy with the
-                            results."
+                            “On time, excellent price, well presented
+                            and fast working. Would recommend Manchester
+                            Electric to anyone.”
                         </blockquote>
 
                         <div class="review-author">
+                            <span class="review-avatar">C</span>
 
-                            <div class="review-avatar">
-                                O
-                            </div>
+                            <span>
+                                <strong>Customer feedback</strong>
+                                <small>Manchester</small>
+                            </span>
+                        </div>
 
-                            <div>
-                                <strong>
-                                    Oscar T
-                                </strong>
+                    </article>
 
-                                <span>
-                                    Customer review
-                                </span>
-                            </div>
 
+                    <article class="review-card review-card-blue">
+
+                        <div class="stars" aria-label="5 star review">
+                            ★★★★★
+                        </div>
+
+                        <blockquote>
+                            “Professional, friendly and knowledgeable.
+                            The work was completed quickly and to an
+                            excellent standard.”
+                        </blockquote>
+
+                        <div class="review-author">
+                            <span class="review-avatar">R</span>
+
+                            <span>
+                                <strong>Customer feedback</strong>
+                                <small>Greater Manchester</small>
+                            </span>
                         </div>
 
                     </article>
@@ -2718,70 +961,25 @@
 
                     <article class="review-card">
 
-                        <div class="stars">
+                        <div class="stars" aria-label="5 star review">
                             ★★★★★
                         </div>
 
                         <blockquote>
-                            "Louie is very knowledgeable and friendly,
-                            able to sound advice on matters beyond
-                            electricity. His team were swift and
-                            professional."
+                            “Good price, quick turnaround and neatly
+                            done. Very happy with the results.”
                         </blockquote>
 
                         <div class="review-author">
+                            <span class="review-avatar">O</span>
 
-                            <div class="review-avatar">
-                                R
-                            </div>
-
-                            <div>
-                                <strong>
-                                    Richard Ventress
-                                </strong>
-
-                                <span>
-                                    Customer review
-                                </span>
-                            </div>
-
+                            <span>
+                                <strong>Customer feedback</strong>
+                                <small>Manchester</small>
+                            </span>
                         </div>
 
                     </article>
-
-
-                    <article class="review-card">
-
-                        <div class="stars">
-                            ★★★★★
-                        </div>
-
-                        <blockquote>
-                            "Had a full rewire done. Good price, quick
-                            turnaround and neatly done. Very pleased
-                            with the quality of the work."
-                        </blockquote>
-
-                        <div class="review-author">
-
-                            <div class="review-avatar">
-                                C
-                            </div>
-
-                            <div>
-                                <strong>
-                                    Customer
-                                </strong>
-
-                                <span>
-                                    Customer review
-                                </span>
-                            </div>
-
-                        </div>
-
-                    </article>
-
 
                 </div>
 
@@ -2791,75 +989,105 @@
 
 
         <!-- =====================================================
-             CONTACT
-             ===================================================== -->
+             CTA / CONTACT
+        ====================================================== -->
 
-        <section class="section" id="contact">
+        <section
+            class="contact-section"
+            id="contact"
+        >
 
             <div class="container contact-grid">
 
+                <div class="contact-intro">
 
-                <div class="contact-info">
-
-                    <div class="eyebrow">
+                    <div class="eyebrow eyebrow-light">
+                        <span class="eyebrow-line"></span>
                         Get in touch
                     </div>
 
                     <h2>
-                        Let's talk about your electrical project.
+                        Let's talk about
+                        <span>your electrical work.</span>
                     </h2>
 
                     <p>
-                        Tell us what you need and our team can discuss
-                        your requirements and arrange a quotation.
+                        Need an electrician, a quotation or some advice?
+                        Contact Manchester Electric and we'll be happy
+                        to discuss your requirements.
                     </p>
-
 
                     <div class="contact-details">
 
+                        <a href="tel:01618501610" class="contact-detail">
+
+                            <span class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M6.7 3.5 9.2 3c.6-.1 1.2.2 1.4.8l1.1 3c.2.5 0 1-.4 1.4L9.8 9.7c1 2 2.5 3.5 4.5 4.5l1.5-1.5c.4-.4.9-.5 1.4-.4l3 1.1c.6.2.9.8.8 1.4l-.5 2.5c-.1.6-.7 1-1.3 1C11 18.3 5.7 13 5.7 6.8c0-.6.4-1.2 1-1.3Z"/>
+                                </svg>
+                            </span>
+
+                            <span>
+                                <small>Call us</small>
+                                <strong>0161 850 1610</strong>
+                            </span>
+
+                        </a>
+
+
+                        <a
+                            href="mailto:ask@manchesterelectric.co.uk"
+                            class="contact-detail"
+                        >
+
+                            <span class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <rect x="3" y="5" width="18" height="14" rx="1"/>
+                                    <path d="m4 7 8 6 8-6"/>
+                                </svg>
+                            </span>
+
+                            <span>
+                                <small>Email</small>
+                                <strong>ask@manchesterelectric.co.uk</strong>
+                            </span>
+
+                        </a>
+
 
                         <div class="contact-detail">
 
-                            <div class="contact-detail-icon">
-                                ☎
-                            </div>
+                            <span class="contact-detail-icon">
+                                <svg viewBox="0 0 24 24" aria-hidden="true">
+                                    <path d="M12 21s7-6.2 7-11.5a7 7 0 1 0-14 0C5 14.8 12 21 12 21Z"/>
+                                    <circle cx="12" cy="9.5" r="2.5"/>
+                                </svg>
+                            </span>
 
-                            <div>
+                            <span>
+                                <small>Registered office</small>
                                 <strong>
-                                    Telephone
+                                    8 Lower Ormond Street<br>
+                                    Manchester M1 5QF
                                 </strong>
-
-                                <a href="tel:01618501610">
-                                    0161 850 1610
-                                </a>
-                            </div>
+                            </span>
 
                         </div>
 
+                    </div>
 
-                        <div class="contact-detail">
-
-                            <div class="contact-detail-icon">
-                                @
-                            </div>
-
-                            <div>
-                                <strong>
-                                    Email
-                                </strong>
-
-                                <a
-                                    href="mailto:ask@manchesterelectric.co.uk"
-                                >
-                                    ask@manchesterelectric.co.uk
-                                </a>
-                            </div>
-
-                        </div>
+                </div>
 
 
-                        <div class="contact-detail">
+                <div class="contact-form-wrapper">
 
-                            <div class="contact-detail-icon">
-                                📍
-                            </div
+                    <form
+                        class="contact-form"
+                        action="#"
+                        method="post"
+                    >
+
+                        <div class="form-heading">
+                            <h3>Request a free quote</h3>
+                            <p>
+                                Tell us a little about your requirements
